@@ -1,0 +1,181 @@
+{
+  "name": "Apocalypse Averted",
+  "map": "Shadows Of Evil",
+  "color": "orange",
+  "edition": "blackOps3",
+  "thumbnail": "https://static.wikia.nocookie.net/callofduty/images/1/14/Shadows_of_Evil_Menu_Selection_BO3.png/revision/latest/scale-to-width-down/1000",
+  "steps": [
+    {
+      "name": "activateBeastMode",
+      "summary": "Activate Beast Mode.",
+      "icon": "jellyfish"
+    },
+    {
+      "name": "getTheSummoningKey",
+      "summary": "Get The Summoning Key.",
+      "icon": "sphere",
+      "dependencies": [
+        "activateBeastMode"
+      ]
+    },
+    {
+      "name": "theMagicianItem",
+      "summary": "Obtain the Lawyer's Pen by using Beast Mode to electrify the meter and drop the crate on Easy Street.",
+      "icon": "pen",
+      "dependencies": [
+        "activateBeastMode"
+      ]
+    },
+    {
+      "name": "theMagician",
+      "summary": "Complete the Magician's ritual in his apartment above Easy Street.",
+      "icon": "autoFix",
+      "dependencies": [
+        "getTheSummoningKey",
+        "theMagicianItem"
+      ]
+    },
+    {
+      "name": "theBoxerItem",
+      "icon": "trophyAward",
+      "summary": "Obtain the Championship Belt by using Beast Mode to knock down the crate in the Waterfront District.",
+      "dependencies": [
+        "activateBeastMode"
+      ]
+    },
+    {
+      "name": "theBoxer",
+      "icon": "boxingGlove",
+      "summary": "Complete the Boxer's ritual in the Waterfront District.",
+      "dependencies": [
+        "getTheSummoningKey",
+        "theBoxerItem"
+      ]
+    },
+    {
+      "name": "theDetectiveItem",
+      "icon": "badgeAccount",
+      "summary": "Obtain the Detective's Badge by using Beast Mode to access the crate behind the locked grate in the Canals District.",
+      "dependencies": [
+        "activateBeastMode"
+      ]
+    },
+    {
+      "name": "theDetective",
+      "summary": "Complete the Detective's ritual in the Ruby Rabbit.",
+      "icon": "policeBadge",
+      "dependencies": [
+        "getTheSummoningKey",
+        "theDetectiveItem"
+      ]
+    },
+    {
+      "name": "theFemmeFataleItem",
+      "summary": "Obtain the Producer's Toupee by using Beast Mode to cross the gap and drop the crate in the Footlight District.",
+      "icon": "hairDryer",
+      "dependencies": [
+        "activateBeastMode"
+      ]
+    },
+    {
+      "name": "theFemmeFatale",
+      "summary": "Complete the Femme Fatale's ritual in the Black Lace Burlesque.",
+      "icon": "faceWoman",
+      "dependencies": [
+        "getTheSummoningKey",
+        "theFemmeFataleItem"
+      ]
+    },
+    {
+      "name": "collectGateworms",
+      "summary": "Collect the Gateworms from each completed ritual site.",
+      "icon": "worm",
+      "dependencies": [
+        "theMagician",
+        "theBoxer",
+        "theDetective",
+        "theFemmeFatale"
+      ]
+    },
+    {
+      "name": "ascendingTheApocalypse",
+      "summary": "Place the Gateworms in the Sacred Place to access the Pack-a-Punch.",
+      "icon": "gateway",
+      "dependencies": [
+        "unlockTheSacredPlace",
+        "collectGateworms"
+      ]
+    },
+    {
+      "name": "unlockTheSacredPlace",
+      "summary": "Unlock the sacred place by opening a rift.",
+      "icon": "selectPlace",
+      "dependencies": [
+        "activateBeastMode"
+      ]
+    },
+    {
+      "name": "rideTheTram",
+      "summary": "Ride the Tram to spot the three symbols through the windows, necessary for the Apothicon Sword.",
+      "icon": "tram"
+    },
+    {
+      "name": "obtainingTheApothiconEggs",
+      "summary": "Use the spotted symbols to open a wall and get an Apothicon Egg in the Sacred Place.",
+      "icon": "egg",
+      "dependencies": [
+        "rideTheTram",
+        "unlockTheSacredPlace"
+      ]
+    },
+    {
+      "name": "chargeApothiconEggs",
+      "summary": "Place and charge the Apothicon Eggs at each the four statue by killing zombies.",
+      "icon": "eggEaster",
+      "dependencies": [
+        "obtainingTheApothiconEggs"
+      ]
+    },
+    {
+      "name": "getTheApothiconSwords",
+      "summary": "Get Apothicon Sword by returning the charged egg to the statue at The Crazy Place.",
+      "icon": "sword",
+      "dependencies": [
+        "chargeApothiconEggs"
+      ]
+    },
+
+    {
+      "name": "upgradingTheApothiconSwords",
+      "summary": "Use the Eggs to complete rituals around the map, upgrading the Apothicon Swords.",
+      "icon": "swordUpgrade",
+      "dependencies": [
+        "getTheApothiconSwords"
+      ]
+    },
+    {
+      "name": "captureTheFlag",
+      "summary": "Interact with the book in Nero's ritual area, then defend the flag at specific locations.",
+      "icon": "flag",
+      "dependencies": [
+        "upgradingTheApothiconSwords"
+      ]
+    },
+    {
+      "name": "capturingTheShadowman",
+      "summary": "Use the Keeper protectors to remove the Shadowman's shield, then capture him in the Summoning Key.",
+      "icon": "shadowman",
+      "dependencies": [
+        "captureTheFlag"
+      ]
+    },
+    {
+      "name": "avertingTheApocalypse",
+      "summary": "Kill Margwas to reactivate Beast Mode pedestals, then use them to disrupt the giant Apothicon's attack.",
+      "icon": "apocalypse",
+      "dependencies": [
+        "capturingTheShadowman"
+      ]
+    }
+  ]
+}
